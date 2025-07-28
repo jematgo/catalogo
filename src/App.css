@@ -148,3 +148,48 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+/* Bootstrap compatibility - Ensure Tailwind takes precedence where needed */
+@layer utilities {
+  .tw-reset {
+    all: revert;
+  }
+}
+
+/* Override Bootstrap's default button styles to maintain Apple aesthetic */
+.btn-apple {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+  border-radius: var(--radius) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.btn-apple:hover {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+  transform: scale(0.98) !important;
+}
+
+/* Ensure Bootstrap grid system works with Tailwind */
+.container-fluid,
+.container,
+.row,
+[class*="col-"] {
+  box-sizing: border-box;
+}
+
+/* Bootstrap modal compatibility */
+.modal-content {
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Bootstrap card compatibility */
+.card {
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+  background-color: var(--card) !important;
+  color: var(--card-foreground) !important;
+}
