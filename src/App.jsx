@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import CategoryGrid from './components/CategoryGrid';
 import ProductGrid from './components/ProductGrid';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat'; // 💬 COMPONENTE DE WHATSAPP FLOTANTE
 import './App.css';
 
 function App() {
@@ -52,6 +53,9 @@ function App() {
       )}
       
       <Footer />
+      
+      {/* 💬 ICONO FLOTANTE DE WHATSAPP - SIEMPRE VISIBLE */}
+      <WhatsAppFloat />
     </div>
   );
 }

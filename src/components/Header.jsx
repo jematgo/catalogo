@@ -2,9 +2,16 @@ import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+// 🎯 COMPONENTE HEADER (ENCABEZADO)
+// =================================
+// Este componente contiene la navegación principal del sitio.
+// Aquí puedes personalizar el nombre del negocio y la información de contacto.
+
 const Header = ({ onCategoryClick, onHomeClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // 📂 CATEGORÍAS DE NAVEGACIÓN
+  // Si añades nuevas categorías en products.js, también añádelas aquí
   const categories = [
     { id: 'futbol', name: 'Fútbol' },
     { id: 'princesas', name: 'Princesas' },
@@ -18,15 +25,15 @@ const Header = ({ onCategoryClick, onHomeClick }) => {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* 🏷️ LOGO Y NOMBRE DEL NEGOCIO - PERSONALIZA AQUÍ */}
           <div 
             className="flex-shrink-0 cursor-pointer"
             onClick={onHomeClick}
           >
             <h1 className="text-xl font-bold text-gray-900">
-              Fundas Candy Bar
+              Fundas Candy Bar {/* 🔗 CAMBIA EL NOMBRE DE TU NEGOCIO AQUÍ */}
             </h1>
-            <p className="text-xs text-gray-600">by Matías</p>
+            <p className="text-xs text-gray-600">by Matías</p> {/* 🔗 CAMBIA TU NOMBRE AQUÍ */}
           </div>
 
           {/* Desktop Navigation */}
